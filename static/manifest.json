@@ -1,0 +1,20 @@
+{
+    "short_name": "Excel Reporter",
+    "name": "Generate your excel monthly reports",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#D9D9D9",
+    "theme_color": "#D9D9D9",
+    "orientation": "portrait-primary",
+    "icons": [{
+            "src": "../static/images/xls.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "../static/images/xls.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
+}

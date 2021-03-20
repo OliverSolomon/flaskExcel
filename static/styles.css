@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background: linear-gradient(to right, red , yellow); */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container{
+    /* border: 2px solid black; */
+}
+
+form{
+    min-height: 40vh;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+form div{
+    /* border: 2px solid green; */
+}
+
+.upload-input{
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+    background-color: rgb(211, 211, 211);
+    /* box-shadow: 7px 7px 0.4 #000, -7px -7px 0.4 #fff; */
+}
+
+/* #uploadFile{
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+} */
+
+input[type="submit"]{
+    /* margin: 1em; */
+    padding: 1em 1.5em 1em 1.5em;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.submit-input{
+    background: rgb(99, 202, 130);
+    /* padding-left: 1em; */
+}
+
+.submit-input i{
+    font-size: 1.4rem;
+    padding-left: 1em;
+    padding-top: .6em;
+    color: #fff;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.text a{
+    text-decoration: none;
+    color: aliceblue;
+    margin: 1em;
+    padding: 1em 1.5em 1em 1.5em;
+    /* background: linear-gradient(to right, rgb(184, 127, 127) , rgb(83, 40, 161)); */
+    background: rgb(214, 95, 125);
+}

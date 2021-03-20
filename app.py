@@ -17,5 +17,9 @@ def data():
     location = './uploads/data-file.xlsx'
     return send_file(location, as_attachment=True)
 
+@app.route('/service-worker.js')
+def sw():
+    return app.send_static_file('static/sw.js')
+
 if __name__ == "__main__":
     app.run(debug = True)
