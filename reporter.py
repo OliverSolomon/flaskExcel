@@ -1,20 +1,22 @@
 import pandas as pd
 from glob import glob
 from datetime import datetime
+import os
 
-def removeDups(df):
-    # df = pd.read_excel("Feb 2021.xlsx")
+def removeDups(file):
+    df = pd.read_excel(file)
     # Keep only FIRST record from set of duplicates
     df_first_record = df.drop_duplicates(subset="Date/Time", keep="first")
     #creates an excel file with sorted times
     if glob("noDupsTime.xlsx"):
         pass
     else:
-        df_first_record.to_excel("noDupsTime.xlsx", index=False)
+        df_first_record.to_excel("./downloads/noDupsTime.xlsx", index=False)
 
-removeDups(upload_file)
+# removeDups()
 
 def create_dict():
+    os.chdir('./downloads')
     df=pd.read_excel("noDupsTime.xlsx")
     names_list=list(df['Name'])
     dates_list=list(df['Date/Time'])
@@ -84,6 +86,10 @@ def create_report(create_dict):
     df=pd.DataFrame({"Names":lst_of_names,"Date":lst_of_dates,"Time_in":lst_of_timein,"Time_out":lst_of_timeout,"Time Spent":lst_of_durations})
     #df2=pd.DataFrame({"Time_in":lst_of_timein,"Time_out":lst_of_timeout})
     #df=pd.DataFrame({"Names":lst_of_names,"Date":lst_of_dates})
-    df.to_excel('fingers.xlsx')
+    df.to_excel('report.xlsx')
     #df2.to_excel('fingers2.xlsx')
-create_report(create_dict)
+# create_report(create_dict)
+
+def report(file):
+    removeDups(file)
+    create_report(create_dict)

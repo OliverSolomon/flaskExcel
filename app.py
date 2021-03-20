@@ -1,5 +1,4 @@
 from flask import Flask, render_template, url_for, request, send_file
-# import pandas as pd
 import os
 
 from reporter import report
@@ -19,7 +18,7 @@ def home():
 
 @app.route('/data')
 def data():
-    location = './uploads/data-file.xlsx'
+    location = './downloads/report.xlsx'
     return send_file(location, as_attachment=True)
 
 @app.route('/sw.js')
